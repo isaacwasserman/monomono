@@ -12,9 +12,13 @@ var bing = new Scraper.Bing();
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
+app.get('/', function(req, res) {
+  res.send("this is not where you want to be");
+}
+
 app.get('/:emotion', function(req, res) {
   
-  var searchTerm = req.params.emotion + "monkey";
+  var searchTerm = req.params.emotion + " monkey gif";
   console.log("searching for " + searchTerm);
 
   bing.list({
