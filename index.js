@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 
 app.get('/:emotion', function(req, res) {
   
-  var searchTerm = req.params.emotion + " monkey gif";
+  var searchTerm = req.params.emotion + " monkey";
   console.log("searching for " + searchTerm);
 
   bing.list({
